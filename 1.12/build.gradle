@@ -49,7 +49,7 @@ processResources {
 curseforge {
 	apiKey = ''
 	project {
-		id = '266736'
+		id = '304920'
 		releaseType = 'release'
 		changelog = 'https://github.com/PanSzelescik/morelibs/blob/master/CHANGELOG.md'
 	}
