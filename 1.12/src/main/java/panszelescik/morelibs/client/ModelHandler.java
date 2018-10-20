@@ -2,6 +2,7 @@ package panszelescik.morelibs.client;
 
 import static panszelescik.morelibs.MoreLibs.*;
 
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -17,6 +18,10 @@ public final class ModelHandler {
 		for (Item item : Item.REGISTRY) {
 			if (item instanceof IModelRegister)
 				((IModelRegister) item).registerModel();
+		}
+		for (Block block : Block.REGISTRY) {
+			if (block instanceof IModelRegister)
+				((IModelRegister) block).registerModel();
 		}
 	}
 }

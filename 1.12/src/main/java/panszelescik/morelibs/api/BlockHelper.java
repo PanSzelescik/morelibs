@@ -15,7 +15,6 @@ public class BlockHelper {
 	public static final byte[] SIDE_OPPOSITE = { 1, 0, 3, 2, 5, 4 };
 	
 	public static final class RotationType {
-		
 		public static final int STAIRS = 1;
 		public static final int SLAB = 2;
 		public static final int CHEST = 3;
