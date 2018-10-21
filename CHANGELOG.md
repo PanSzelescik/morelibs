@@ -1,5 +1,8 @@
 # More Libs Changelog
 
+### 1.12.2-1.0.3
+- Added one method
+
 ### 1.12.2-1.0.2
 - Basic blocks stuff
 

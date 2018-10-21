@@ -84,4 +84,8 @@ public class BlockHelper {
 	private static int getId(Block block) {
 		return Block.getIdFromBlock(block);
 	}
+	
+	public static boolean startWith(Block block, String name) {
+		return block.getRegistryName().toString().startsWith(name);
+	}
 }
