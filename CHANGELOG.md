@@ -1,5 +1,8 @@
 # More Libs Changelog
 
+### 1.12.2-1.0.4
+- More methods to NBTHelper
+
 ### 1.12.2-1.0.3
 - Added one method
 
