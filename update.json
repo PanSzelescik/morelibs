@@ -1,10 +1,11 @@
 {
 	"homepage": "https://minecraft.curseforge.com/projects/morelibs/files",
 	"promos": {
-		"1.12.2-latest": "1.0.4",
-		"1.12.2-recommended": "1.0.4"
+		"1.12.2-latest": "1.0.5",
+		"1.12.2-recommended": "1.0.5"
 	},
 	"1.12.2": {
+		"1.0.5": "Added HandHelper for Cool Gadgets",
 		"1.0.4": "More methods to NBTHelper",
 		"1.0.3": "Added one method",
 		"1.0.2": "Basic blocks stuff",

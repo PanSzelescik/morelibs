@@ -1,5 +1,8 @@
 # More Libs Changelog
 
+### 1.12.2-1.0.5
+- Added HandHelper for Cool Gadgets
+
 ### 1.12.2-1.0.4
 - More methods to NBTHelper
 
