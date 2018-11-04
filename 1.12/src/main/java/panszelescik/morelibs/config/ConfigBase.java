@@ -42,10 +42,6 @@ public class ConfigBase {
 		return modid;
 	}
 	
-	public static List<IConfigElement> getConfigElements() {	
-		return null;
-	}
-	
 	public static boolean getBoolean(String name, String category, boolean defaultValue, String comment) {
 		return getCfg().getBoolean(name, category, defaultValue, comment);
 	}

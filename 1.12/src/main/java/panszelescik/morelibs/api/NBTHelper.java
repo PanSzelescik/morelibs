@@ -66,7 +66,7 @@ public class NBTHelper {
 		getTagCompound(stack).setDouble(key, value);
 	}
 	
-	public static float getByteArray(ItemStack stack, String key, float defaultValue) {
+	public static float getFloat(ItemStack stack, String key, float defaultValue) {
 		if (!keyExists(stack, key)) {
 			return defaultValue;
 		}
@@ -106,7 +106,7 @@ public class NBTHelper {
 		return getTagCompound(stack).getLong(key);
 	}
 
-	public static void setIntArray(ItemStack stack, String key, long value) {
+	public static void setLong(ItemStack stack, String key, long value) {
 		getTagCompound(stack).setLong(key, value);
 	}
 	
@@ -117,7 +117,7 @@ public class NBTHelper {
 		return getTagCompound(stack).getShort(key);
 	}
 
-	public static void setIntArray(ItemStack stack, String key, short value) {
+	public static void setShort(ItemStack stack, String key, short value) {
 		getTagCompound(stack).setShort(key, value);
 	}
 	

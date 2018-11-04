@@ -16,9 +16,7 @@ public class ModGuiFactoryBase implements IModGuiFactory {
 	
 	/* This must be overrided! */
 	@Override
-	public GuiScreen createConfigGui(GuiScreen parentScreen) {
-		return null;
-	}
+	public GuiScreen createConfigGui(GuiScreen parentScreen) { return null; }
 
 	@Override
 	public Set<RuntimeOptionCategoryElement> runtimeGuiCategories() { return null; }
