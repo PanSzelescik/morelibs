@@ -8,7 +8,6 @@ import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumHand;
 import net.minecraftforge.client.event.FOVUpdateEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.event.MouseEvent;
@@ -63,8 +62,8 @@ public final class ClientEventHandler {
 				ClientHelper.drawTexturedRect(0, 0, resMin, resMin, 0f, 1f, 0f, 1f);
 				ClientHelper.bindTexture("morelibs:textures/gui/hud_elements.png");
 				ClientHelper.drawTexturedRect(218 / 256f * resMin, 64 / 256f * resMin, 24 / 256f * resMin, 128 / 256f * resMin, 64 / 256f, 88 / 256f, 96 / 256f, 224 / 256f);
-				ItemStack equipped = ClientHelper.mc().player.getHeldItem(EnumHand.MAIN_HAND);
-				if (!equipped.isEmpty() && equipped.getItem() instanceof IZoomable) {
+				ItemStack equipped = ClientHelper.getZoomable(ClientHelper.mc().player);
+				if (equipped != ItemStack.EMPTY) {
 					IZoomable tool = (IZoomable) equipped.getItem();
 					float[] steps = tool.getZoomSteps(equipped, ClientHelper.mc().player);
 					if (steps != null && steps.length > 1) {
@@ -103,9 +102,9 @@ public final class ClientEventHandler {
 	@SubscribeEvent
 	public static void onFOVUpdate(FOVUpdateEvent event) {
 		EntityPlayer player = ClientHelper.mc().player;
-		if (!player.getHeldItem(EnumHand.MAIN_HAND).isEmpty() && player.getHeldItem(EnumHand.MAIN_HAND).getItem() instanceof IZoomable) {
+		ItemStack equipped = ClientHelper.getZoomable(ClientHelper.mc().player);
+		if (equipped != ItemStack.EMPTY) {
 			if (player.isSneaking() && player.onGround && ClientHelper.mc().gameSettings.thirdPersonView == 0) {
-				ItemStack equipped = player.getHeldItem(EnumHand.MAIN_HAND);
 				IZoomable tool = (IZoomable) equipped.getItem();
 				if (tool.canZoom(equipped, player)) {
 					if (!ZoomHelper.isZooming) {
@@ -142,10 +141,10 @@ public final class ClientEventHandler {
 	public static void onMouseEvent(MouseEvent event) {
 		if (event.getDwheel() != 0 && ClientHelper.mc().gameSettings.thirdPersonView == 0) {
 			EntityPlayer player = ClientHelper.mc().player;
-			if (!player.getHeldItem(EnumHand.MAIN_HAND).isEmpty() && player.isSneaking()) {
-				ItemStack equipped = player.getHeldItem(EnumHand.MAIN_HAND);
-				if (equipped.getItem() instanceof IZoomable) {
-					IZoomable tool = (IZoomable)equipped.getItem();
+			if (player.isSneaking()) {
+				ItemStack equipped = ClientHelper.getZoomable(ClientHelper.mc().player);
+				if (equipped != ItemStack.EMPTY) {
+					IZoomable tool = (IZoomable) equipped.getItem();
 					if (tool.canZoom(equipped, player)) {
 						float[] steps = tool.getZoomSteps(equipped, player);
 						if (steps != null && steps.length > 0) {
