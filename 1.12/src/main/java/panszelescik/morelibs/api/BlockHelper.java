@@ -9,7 +9,7 @@ import net.minecraft.world.World;
 
 public class BlockHelper {
 	
-	public static int MAX_ID = 1024;
+	public static int MAX_ID = 4096;
 	public static byte[] rotateType = new byte[MAX_ID];
 	public static final byte[] SIDE_LEFT = { 4, 5, 5, 4, 2, 3 };
 	public static final byte[] SIDE_OPPOSITE = { 1, 0, 3, 2, 5, 4 };
