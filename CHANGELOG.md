@@ -1,5 +1,8 @@
 # More Libs Changelog
 
+### 1.12.2-1.0.7
+- Some methods for Lunette
+
 ### 1.12.2-1.0.6
 - Added Config stuff
 
