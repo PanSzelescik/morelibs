@@ -1,5 +1,8 @@
 # More Libs Changelog
 
+### 1.12.2-1.0.8
+- Changed some methods
+
 ### 1.12.2-1.0.7
 - Some methods for Lunette
 

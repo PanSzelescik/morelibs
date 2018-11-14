@@ -9,7 +9,7 @@ import net.minecraftforge.client.model.ModelLoader;
 
 public class BlockBase extends Block implements IModelRegister {
 
-	public BlockBase(Material materialIn, CreativeTabs tab) {
+	public BlockBase(CreativeTabs tab, Material materialIn) {
 		super(materialIn);
 		setCreativeTab(tab);
 	}

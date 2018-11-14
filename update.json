@@ -5,6 +5,7 @@
 		"1.12.2-recommended": "1.0.7"
 	},
 	"1.12.2": {
+		"1.0.8": "Changed some methods",
 		"1.0.7": "Some methods for Lunette",
 		"1.0.6": "Added Config stuff",
 		"1.0.5": "Added HandHelper for Cool Gadgets",
