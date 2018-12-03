@@ -1,8 +1,8 @@
 {
 	"homepage": "https://minecraft.curseforge.com/projects/morelibs/files",
 	"promos": {
-		"1.12.2-latest": "1.0.7",
-		"1.12.2-recommended": "1.0.7"
+		"1.12.2-latest": "1.0.8",
+		"1.12.2-recommended": "1.0.8"
 	},
 	"1.12.2": {
 		"1.0.8": "Changed some methods",
