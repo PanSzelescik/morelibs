@@ -11,11 +11,6 @@ import net.minecraftforge.oredict.OreDictionary;
 
 public abstract class Helper {
 	
-	public static ItemStack getItemStack(ResourceLocation name) {
-		Item item = ForgeRegistries.ITEMS.getValue(name);
-		return item != null ? new ItemStack(item, 1, 0) : ItemStack.EMPTY;
-	}
-	
 	public static ItemStack getItemStack(String id, String name, int amount, int meta) {
 		Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation(id + ":" + name));
 		return item != null ? new ItemStack(item, amount, meta) : ItemStack.EMPTY;
