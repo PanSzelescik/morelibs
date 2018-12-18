@@ -1,5 +1,8 @@
 # More Libs Changelog
 
+### 1.12.2-1.1.0
+- Changed methods names
+
 ### 1.12.2-1.0.8
 - Changed some methods
 

@@ -14,7 +14,6 @@ public abstract class ModGuiFactoryBase implements IModGuiFactory {
 	@Override
 	public boolean hasConfigGui() { return true; }
 	
-	/* This must be overrided! */
 	@Override
 	public abstract GuiScreen createConfigGui(GuiScreen parentScreen);
 
