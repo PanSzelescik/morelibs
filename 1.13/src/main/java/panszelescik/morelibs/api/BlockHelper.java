@@ -71,15 +71,16 @@ public class BlockHelper {
 			return true;
 		if (blockA == null | blockB == null)
 			return false;
-		return blockA.equals(blockB) || blockA.isAssociatedBlock(blockB);
+		return blockA.equals(blockB)/* || blockA.isAssociatedBlock(blockB)*/;
 	}
 	
 	public static boolean canRotate(Block block) {
-		int id = getId(block);
-		return id < MAX_ID && rotateType[id] != 0;
+		/*int id = getId(block);
+		return id < MAX_ID && rotateType[id] != 0;*/
+		return true;
 	}
 	
-	public static IBlockState rotateVanillaBlock(World world, IBlockState state, BlockPos pos) {
+	/*public static IBlockState rotateVanillaBlock(World world, IBlockState state, BlockPos pos) {
 		int bId = getId(state.getBlock()), bMeta = state.getBlock().getMetaFromState(state);
 		Block block = state.getBlock();
 		switch (rotateType[bId]) {
@@ -100,10 +101,12 @@ public class BlockHelper {
 			default:
 				return block.getStateFromMeta(bMeta);
 		}
-	}
-	
+	}*/
+
+	// ?
 	private static int getId(Block block) {
-		return Block.getIdFromBlock(block);
+		//return Block.getIdFromBlock(block);
+		return Block.getStateId(block.getDefaultState());
 	}
 	
 	public static boolean startWith(Block block, String name) {

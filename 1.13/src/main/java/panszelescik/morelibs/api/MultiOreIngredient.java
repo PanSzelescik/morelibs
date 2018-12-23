@@ -1,4 +1,4 @@
-package panszelescik.morelibs.api;
+/*package panszelescik.morelibs.api;
 
 import java.util.ArrayList;
 
@@ -99,4 +99,4 @@ public class MultiOreIngredient extends Ingredient {
 	public boolean isSimple() {
 		return true;
 	}
-}
+}*/

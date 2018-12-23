@@ -37,7 +37,7 @@ public final class ClientEventHandler {
 		}
 	}
 	
-	@SubscribeEvent
+	/*@SubscribeEvent
 	public static void onRenderOverlayPre(RenderGameOverlayEvent.Pre event) {
 		if (ZoomHelper.isZooming && event.getType() == RenderGameOverlayEvent.ElementType.CROSSHAIRS) {
 			event.setCanceled(true);
@@ -165,5 +165,5 @@ public final class ClientEventHandler {
 				}
 			}
 		}
-	}
+	}*/
 }

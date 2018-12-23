@@ -8,7 +8,6 @@ import net.minecraft.util.IItemProvider;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import javax.annotation.Nullable;
@@ -36,7 +35,7 @@ public class Helper {
 		return get(item, 1);
 	}
 	
-	public static ItemStack get(String ore, int amount) {
+	/*public static ItemStack get(String ore, int amount) {
 		if (!oreNameExists(ore))
 			return ItemStack.EMPTY;
 		return cloneStack(OreDictionary.getOres(ore, false).get(0), amount);
@@ -44,7 +43,7 @@ public class Helper {
 	
 	public static ItemStack get(String ore) {
 		return get(ore, 1);
-	}
+	}*/
 	
 	public static ItemStack cloneStack(ItemStack stack, int stackSize) {
 		if (stack.isEmpty())
@@ -67,13 +66,13 @@ public class Helper {
 		return notNull(get(id, input, 1, nbt));
 	}
 	
-	public static boolean oreNameExists(String oreName) {
+	/*public static boolean oreNameExists(String oreName) {
 		return OreDictionary.doesOreNameExist(oreName) && OreDictionary.getOres(oreName, false).size() > 0;
 	}
 	
 	public static boolean isLoaded(String modid) {
 		return ModList.isLoaded(modid);
-	}
+	}*/
 	
 	public static String getItemName(ItemStack stack) {
 		return stack.getTranslationKey();
