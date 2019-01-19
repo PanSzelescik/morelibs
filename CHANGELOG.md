@@ -1,7 +1,10 @@
 # More Libs Changelog
 
-### 1.12.2-1.1.0
+### 1.12.2-1.2.0
+- Added easy register system
 - Changed methods names
+- Cleanups
+- Refactors
 
 ### 1.12.2-1.0.8
 - Changed some methods

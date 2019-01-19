@@ -10,15 +10,15 @@ import net.minecraftforge.client.model.ModelLoader;
 
 public class BlockBase extends Block implements IModelRegister {
 
-	public BlockBase(CreativeTabs tab, Material materialIn, String modid, String name) {
-		super(materialIn);
-		setTranslationKey(modid + "." + name);
-		setRegistryName(new ResourceLocation(modid, name));
-		setCreativeTab(tab);
-	}
+    public BlockBase(CreativeTabs tab, Material materialIn, String modid, String name) {
+        super(materialIn);
+        setTranslationKey(modid + "." + name);
+        setRegistryName(new ResourceLocation(modid, name));
+        setCreativeTab(tab);
+    }
 
-	@Override
-	public void registerModel() {
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0, new ModelResourceLocation(getRegistryName(), "inventory"));
-	}
+    @Override
+    public void registerModel() {
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0, new ModelResourceLocation(getRegistryName(), "inventory"));
+    }
 }

@@ -1,11 +1,11 @@
 {
 	"homepage": "https://minecraft.curseforge.com/projects/morelibs/files",
 	"promos": {
-		"1.12.2-latest": "1.0.8",
-		"1.12.2-recommended": "1.0.8"
+		"1.12.2-latest": "1.2.0",
+		"1.12.2-recommended": "1.2.0"
 	},
 	"1.12.2": {
-		"1.1.0": "Changed methods names",
+		"1.2.0": "Added easy register system\nChanged methods names\nCleanups\nRefactors",
 		"1.0.8": "Changed some methods",
 		"1.0.7": "Some methods for Lunette",
 		"1.0.6": "Added Config stuff",
