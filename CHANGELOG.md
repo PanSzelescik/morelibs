@@ -1,5 +1,8 @@
 # More Libs Changelog
 
+### 1.12.2-1.2.1
+- Added ClassComparator
+
 ### 1.12.2-1.2.0
 - Added easy register system
 - Changed methods names
