@@ -1,5 +1,10 @@
 # More Libs Changelog
 
+### 1.12.2-1.2.2
+- Added ClassHelper
+- Added FieldHelper
+- Added MethodHelper
+
 ### 1.12.2-1.2.1
 - Added ClassComparator
 
