@@ -4,9 +4,11 @@ import net.minecraft.block.Block;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.IItemProvider;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.fml.ForgeI18n;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -21,19 +23,11 @@ public class Helper {
         return get(id, name, 1);
     }
 
-    public static ItemStack get(Block block, int amount) {
-        return block != null ? new ItemStack(block, amount) : ItemStack.EMPTY;
-    }
-
-    public static ItemStack get(Item item, int amount) {
+    public static ItemStack get(IItemProvider item, int amount) {
         return item != null ? new ItemStack(item, amount) : ItemStack.EMPTY;
     }
 
-    public static ItemStack get(Block block) {
-        return get(block, 1);
-    }
-
-    public static ItemStack get(Item item) {
+    public static ItemStack get(IItemProvider item) {
         return get(item, 1);
     }
 
@@ -58,24 +52,31 @@ public class Helper {
         return ModList.get().isLoaded(modid);
     }
 
-    public static String getItemName(ItemStack stack) {
+    public static String getRegistryName(Item item) {
+        return item.getName().getString();
+    }
+
+    public static String getRegistryName(ItemStack stack) {
+        return getRegistryName(stack.getItem());
+    }
+
+    public static String getRegistryName(String id, String name, int amount) {
+        return getRegistryName(get(id, name, amount));
+    }
+
+    public static String getTranslationName(ItemStack stack) {
         return stack.getTranslationKey();
     }
 
-    public static String getItemName(String id, String name, int amount) {
-        return getItemName(get(id, name, amount));
+    public static String getTranslationName(String id, String name) {
+        return getTranslationName(get(id, name, 1));
     }
 
-    public static String getItemName(String id, String name) {
-        return getItemName(id, name, 1);
+    public static String getTranslationName(String id, String name, int amount) {
+        return getTranslationName(get(id, name, amount));
     }
 
-    public static String getItemName(Item item) {
-        return getItemName(get(item));
-    }
-
-    @OnlyIn(Dist.CLIENT)
     public static String translate(String key) {
-        return I18n.format(key);
+        return ForgeI18n.parseFormat(key);
     }
 }

@@ -1,13 +1,12 @@
 {
 	"homepage": "https://minecraft.curseforge.com/projects/morelibs/files",
 	"promos": {
-		"1.13.2-latest": "1.2.2-alpha1",
-		"1.13.2-recommended": "1.2.2-alpha1"
+		"1.13.2-latest": "2.0.0",
 		"1.12.2-latest": "1.2.2",
 		"1.12.2-recommended": "1.2.2"
 	},
 	"1.13.2": {
-		"1.2.2-alpha1": "First alpha version",
+		"2.0.0": "Port to Minecraft 1.13.2, beta!",
 	},
 	"1.12.2": {
 		"1.2.2": "Added ClassHelper\nAdded FieldHelper\nAdded MethodHelper",

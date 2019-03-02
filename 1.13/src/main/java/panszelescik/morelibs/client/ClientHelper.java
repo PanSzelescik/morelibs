@@ -17,7 +17,7 @@ import java.util.HashMap;
 
 public class ClientHelper {
 
-    /*static HashMap<String, ResourceLocation> resourceMap = new HashMap<String, ResourceLocation>();
+    static HashMap<String, ResourceLocation> resourceMap = new HashMap<String, ResourceLocation>();
 
     public static Minecraft mc() {
         return Minecraft.getInstance();
@@ -41,8 +41,8 @@ public class ClientHelper {
     public static void drawColouredRect(int x, int y, int w, int h, int colour) {
         GlStateManager.disableTexture2D();
         GlStateManager.enableBlend();
-        GlStateManager.disableAlpha();
-        GlStateManager.tryBlendFuncSeparate(770, 771, 1, 0);
+        GlStateManager.disableAlphaTest();
+        GlStateManager.blendFuncSeparate(770, 771, 1, 0);
         GlStateManager.shadeModel(GL11.GL_SMOOTH);
         Tessellator tessellator = Tessellator.getInstance();
         BufferBuilder worldrenderer = tessellator.getBuffer();
@@ -54,7 +54,7 @@ public class ClientHelper {
         tessellator.draw();
         GlStateManager.shadeModel(GL11.GL_FLAT);
         GlStateManager.disableBlend();
-        GlStateManager.enableAlpha();
+        GlStateManager.enableAlphaTest();
         GlStateManager.enableTexture2D();
     }
 
@@ -85,5 +85,5 @@ public class ClientHelper {
         } else if (!main.isEmpty() && main.getItem() instanceof IZoomable)
             return main;
         return ItemStack.EMPTY;
-    }*/
+    }
 }

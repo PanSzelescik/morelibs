@@ -1,5 +1,8 @@
 # More Libs Changelog
 
+### 1.13.2-2.0.0
+- Port to Minecraft 1.13.2, beta!
+
 ### 1.12.2-1.2.2
 - Added ClassHelper
 - Added FieldHelper
