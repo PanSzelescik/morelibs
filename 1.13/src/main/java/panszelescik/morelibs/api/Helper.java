@@ -4,6 +4,8 @@ import net.minecraft.block.Block;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.Tag;
 import net.minecraft.util.IItemProvider;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
@@ -11,6 +13,11 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.fml.ForgeI18n;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
 
 public class Helper {
 
@@ -38,6 +45,31 @@ public class Helper {
         retStack.setCount(stackSize);
 
         return retStack;
+    }
+
+    public static boolean tagExists(ResourceLocation loc) {
+        Tag<Item> tag = ItemTags.getCollection().get(loc);
+        return tag != null && !tag.getAllElements().isEmpty();
+    }
+
+    public static boolean tagExists(String modid, String id) {
+        return tagExists(new ResourceLocation(modid, id));
+    }
+
+    public static boolean tagExists(String tag) {
+        return tagExists(new ResourceLocation(tag));
+    }
+
+    public static Collection<Item> getTag(ResourceLocation tag) {
+        return tagExists(tag) ? ItemTags.getCollection().get(tag).getAllElements() : new ArrayList<>();
+    }
+
+    public static Collection<Item> getTag(String modid, String id) {
+        return getTag(new ResourceLocation(modid, id));
+    }
+
+    public static Collection<Item> getTag(String tag) {
+        return getTag(new ResourceLocation(tag));
     }
 
     public static boolean notNull(ItemStack stack) {
